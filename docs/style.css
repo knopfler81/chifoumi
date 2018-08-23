@@ -5,3 +5,7 @@
 #start {
 	visibility: visible;
 }
+
+#myTitle {
+	margin-top: 20px; 
+}
