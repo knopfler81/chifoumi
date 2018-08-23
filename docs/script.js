@@ -31,6 +31,7 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 
 					if(player_attempt === computer_attempt){
 						messageStart.innerHTML ="Pas de gagnant";
+						messageStart.style.color = "orange"
 						player += 0;
 						computer += 0;
 						console.log("Je suis dans la première boucle")
@@ -42,6 +43,7 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 					(player_attempt === "ciseaux") && (computer_attempt === "feuille")){
 						player ++;
 						messageStart.innerHTML = "Bravo tu gagnes!\nL'ordinateur avait choisi " + computer_attempt  + " ton score est de " + player;
+						messageStart.style.color = "green"
 						console.log("Je suis dans la deuxième boucle")
 						console.log("player " + player)
 						
@@ -51,6 +53,7 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 					(computer_attempt === "ciseaux") && (player_attempt === "feuille")){
 						computer ++;
 						messageStart.innerHTML = "L'ordinateur gagne!\nIl avait choisi " + computer_attempt;
+						messageStart.style.color = "red"
 						console.log("Je suis dans la troisième boucle")
 
 						console.log("computer " + computer)
@@ -59,6 +62,7 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 				else
 				{
 					messageStart.innerHTML = "C'est fini Ordinateur: " + computer + " - Joueur " +player;
+					messageStart.style.color = "purple"
 					var startGame = document.getElementById("start")
 					startGame.style.visibility = "visible";
 					setTimeout(function(){location.reload()}, 3000)
