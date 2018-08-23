@@ -27,7 +27,7 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 				var computer_attempt = ["pierre", "feuille", "ciseaux"].sample();
 				var player_attempt = btn.innerHTML 
 				
-				if((computer || player) < 2){
+				if((computer || player) < 3){
 
 					if(player_attempt === computer_attempt){
 						messageStart.innerHTML ="Pas de gagnant";
